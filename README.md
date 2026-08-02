@@ -8,9 +8,9 @@ This extension adds keyboard shortcuts across the Wise money transfer flow so yo
 
 ### Transaction details
 
-| Shortcut                  | Action                                                                                                                             |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>⌘</kbd>+<kbd>c</kbd> | Copy the transfer's share link for the recipient: clicks **Share with recipient**, waits for the popup, then clicks **Copy Link**. |
+| Shortcut                  | Action                                                                                                                                               |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>⌘</kbd>+<kbd>c</kbd> | Copy the transfer's share link for the recipient: clicks **Share with recipient**, waits for the popup, clicks **Copy Link**, then closes the popup. |
 
 Off macOS the default binding is <kbd>Ctrl</kbd>+<kbd>c</kbd>.
 

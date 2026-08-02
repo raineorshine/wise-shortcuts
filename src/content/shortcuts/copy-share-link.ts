@@ -1,13 +1,13 @@
-import { findButton, waitForButton } from '../dom'
+import { findButton, pressEscape, waitForButton } from '../dom'
 import { showToast } from '../toast'
 import { primaryModifier } from './binding'
 import type { Shortcut } from './shortcut'
 
 // `⌘+C` (`Ctrl+C` off macOS) — Copy the recipient share link of the transfer
 // shown on a transaction details page. Wise puts the link behind a two step
-// flow: "Share with recipient" opens a popup containing a "Copy link" button
-// that writes the URL to the clipboard. The shortcut performs both steps, so
-// the popup is left open exactly as if the buttons had been clicked by hand.
+// flow: "Share with recipient" opens a popup containing a "Copy Link" button
+// that writes the URL to the clipboard. The shortcut performs both steps and
+// then dismisses the popup, leaving the page as it was before.
 
 const SHARE_LABEL = 'Share with recipient'
 const COPY_LINK_LABEL = 'Copy Link'
@@ -22,8 +22,8 @@ function hasSelection(): boolean {
 }
 
 /**
- * Opens the share popup and clicks its "Copy link" button once it renders,
- * reporting the outcome in a toast.
+ * Opens the share popup, clicks its "Copy Link" button once it renders, then
+ * dismisses the popup with Escape, reporting the outcome in a toast.
  * @returns Nothing
  */
 async function copyShareLink(
@@ -37,6 +37,9 @@ async function copyShareLink(
     return
   }
   copyLinkButton.click()
+  // Escape is dispatched from the button while it is still in the popup, so the
+  // popup closes as soon as the link is copied rather than being left open.
+  pressEscape(copyLinkButton)
   showToast('Copied share link', 'success')
 }
 

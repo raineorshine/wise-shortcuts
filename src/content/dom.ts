@@ -109,3 +109,20 @@ export function waitForButton(
     filter: button => isButtonLabelled(button, label),
   })
 }
+
+/**
+ * Dispatches an Escape keydown from the given element, e.g. to dismiss the
+ * popup it belongs to. Dispatching from inside the popup rather than on the
+ * document lets the event bubble through the popup's own handlers on its way up
+ * to any document-level ones, so it reaches whichever the page listens on. The
+ * deprecated keyCode is included for handlers that still check it.
+ * @returns Nothing
+ */
+export function pressEscape(
+  /** target - The element to dispatch the key press from. */
+  target: Element,
+): void {
+  target.dispatchEvent(
+    new KeyboardEvent('keydown', { key: 'Escape', code: 'Escape', keyCode: 27, bubbles: true, cancelable: true }),
+  )
+}

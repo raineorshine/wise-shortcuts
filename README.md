@@ -4,11 +4,13 @@ A Chrome extension that adds keyboard shortcuts to Wise.
 
 ## What it does
 
+This extension adds keyboard shortcuts across the Wise money transfer flow so you can keep your hands off the mouse.
+
 ### Transaction details
 
 | Shortcut                  | Action                                                                                                                             |
 | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>⌘</kbd>+<kbd>c</kbd> | Copy the transfer's share link for the recipient: clicks **Share with recipient**, waits for the popup, then clicks **Copy link**. |
+| <kbd>⌘</kbd>+<kbd>c</kbd> | Copy the transfer's share link for the recipient: clicks **Share with recipient**, waits for the popup, then clicks **Copy Link**. |
 
 Off macOS the default binding is <kbd>Ctrl</kbd>+<kbd>c</kbd>.
 

@@ -10,7 +10,7 @@ import type { Shortcut } from './shortcut'
 // the popup is left open exactly as if the buttons had been clicked by hand.
 
 const SHARE_LABEL = 'Share with recipient'
-const COPY_LINK_LABEL = 'Copy link'
+const COPY_LINK_LABEL = 'Copy Link'
 
 /**
  * Whether the user currently has a non-empty text selection on the page.

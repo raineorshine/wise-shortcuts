@@ -1,14 +1,16 @@
 {
   "name": "wise-shortcuts",
-  "description": "A Chrome extension that adds keyboard shortcuts to Wise.",
+  "description": "Keyboard shortcuts for the Wise money transfer flow.",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "private": true,
   "author": {
     "name": "Raine Revere",
     "email": "raine.revere@pm.me",
     "url": "https://github.com/raineorshine"
   },
+  "keywords": [],
+  "homepage": "",
   "license": "ISC",
   "engines": {
     "node": ">=16"

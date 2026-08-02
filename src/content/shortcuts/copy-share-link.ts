@@ -23,7 +23,7 @@ function hasSelection(): boolean {
 
 /**
  * Opens the share popup, clicks its "Copy Link" button once it renders, then
- * dismisses the popup with Escape, reporting the outcome in a toast.
+ * dismisses the popup with Escape, reporting a failure in a toast.
  * @returns Nothing
  */
 async function copyShareLink(
@@ -40,7 +40,7 @@ async function copyShareLink(
   // Escape is dispatched from the button while it is still in the popup, so the
   // popup closes as soon as the link is copied rather than being left open.
   pressEscape(copyLinkButton)
-  showToast('Copied share link', 'success')
+  // No success toast: Wise shows its own when the link is copied.
 }
 
 /** The `⌘+C` shortcut: copy the transfer's share link for the recipient. */

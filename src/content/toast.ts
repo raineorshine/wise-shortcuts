@@ -1,9 +1,7 @@
-// A small transient toast notification used to report the outcome of an action.
+// A small transient toast notification used to report that an action failed.
+// Successful actions stay silent, since Wise shows its own confirmations.
 
 const TOAST_ID = 'wise-shortcuts-toast'
-
-/** The visual style of a toast. */
-type ToastType = 'success' | 'error'
 
 /**
  * Shows a transient toast pinned to the top of the page, replacing any existing
@@ -13,8 +11,6 @@ type ToastType = 'success' | 'error'
 export function showToast(
   /** message - The text to display. */
   message: string,
-  /** type - Whether the toast reports success or an error. Defaults to error. */
-  type: ToastType = 'error',
 ): void {
   document.getElementById(TOAST_ID)?.remove()
 
@@ -35,8 +31,7 @@ export function showToast(
     maxWidth: '400px',
     boxShadow: '0 8px 24px rgba(14, 15, 12, 0.2)',
     color: 'var(--color-content-primary-inverse, #ffffff)',
-    backgroundColor:
-      type === 'error' ? 'var(--color-background-negative, #a8200d)' : 'var(--color-background-accent, #163300)',
+    backgroundColor: 'var(--color-background-negative, #a8200d)',
     transition: 'opacity 0.3s',
   })
 

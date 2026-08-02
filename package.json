@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "description": "",
+  "version": "0.0.0",
+  "author": {
+    "name": "Raine Revere",
+    "email": "raine.revere@pm.me",
+    "url": "https://github.com/raineorshine"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "keywords": [],
+  "homepage": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raineorshine/"
+  },
+  "type": "module",
+  "dependencies": {
+  }
+}

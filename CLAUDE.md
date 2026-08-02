@@ -1,1 +1,5 @@
 - Sample HTML is in ./samples. Use this to determine selectors.
+- Shipping a feature:
+  - Create a PR
+  - Squash merge
+  - Throw away redundant local changes and pull
